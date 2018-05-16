@@ -25,4 +25,5 @@ public class NumberModel {
     public void Minus() {
         number.setNum(number.getNum() - 1);
     }
+
 }

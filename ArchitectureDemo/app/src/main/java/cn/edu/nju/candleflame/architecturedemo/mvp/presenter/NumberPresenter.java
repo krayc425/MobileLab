@@ -1,5 +1,6 @@
 package cn.edu.nju.candleflame.architecturedemo.mvp.presenter;
 
+import android.graphics.Color;
 import android.os.Handler;
 
 import cn.edu.nju.candleflame.architecturedemo.mvp.model.NumberModel;
@@ -17,12 +18,14 @@ public class NumberPresenter {
 
     public void loadNumber() {
         final int num = mNumberModel.getNum();
-        mView.showLoading();//接口请求前显示loading
+        //接口请求前显示loading
+        mView.showLoading();
         //这里模拟接口请求回调
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 mView.showNumber(num);
+                mView.changeColor(num % 2 == 0 ? Color.RED : Color.BLUE);
                 mView.dismissLoading();
             }
         }, 1000);

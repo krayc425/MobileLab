@@ -1,5 +1,6 @@
 package cn.edu.nju.candleflame.architecturedemo.mvp.view;
 
+import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -17,7 +18,6 @@ public class MVPFragment extends Fragment implements IMVPFragment, View.OnClickL
     private TextView numText;
     private TextView loadingText;
     private View rootview;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,6 +43,11 @@ public class MVPFragment extends Fragment implements IMVPFragment, View.OnClickL
     @Override
     public void showNumber(int num) {
         numText.setText(String.valueOf(num));
+    }
+
+    @Override
+    public void changeColor(int color) {
+        numText.setTextColor(color);
     }
 
     @Override
