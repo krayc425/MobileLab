@@ -1,0 +1,4 @@
+service nju_led_service /vendor/bin/hw/android.hardware.nju.led@1.0-service
+    class hal
+    user root
+    group system

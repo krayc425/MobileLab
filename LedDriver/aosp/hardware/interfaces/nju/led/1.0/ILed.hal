@@ -1,0 +1,6 @@
+package android.hardware.nju.led@1.0;
+
+interface ILed {
+    openLed();
+    closeLed();
+};
